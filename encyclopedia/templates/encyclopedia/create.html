@@ -1,0 +1,43 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+ {{entry}}
+{% endblock %}
+
+
+
+{% block body %}
+    <h1>Create entry</h1>
+  <br>
+
+    <form action="{% url 'create'%}" method="POST">
+        
+       
+        
+
+        {% csrf_token %}
+        <h5>{{form.title.label}}</h5>
+        {{form.title}}
+        <br> 
+        <h8 style="color: red;">{{message}}</h8>
+         <br> <br>
+        <h5>{{form.text.label}}</h5>
+        {{form.text}}
+       
+        <br><br>
+        <input type="submit" value="Save">
+    <!-- <br>
+    <div >
+   <label for="create">content:</label>
+   <br>
+   <textarea style= height:40vh;width:90vh; > {{ entry }}</textarea> 
+  
+ 
+  </div>
+  <input type="submit" value="Submit">
+
+-->
+
+{{entry|safe}}
+</form>
+{% endblock %}
