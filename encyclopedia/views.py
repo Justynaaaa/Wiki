@@ -68,7 +68,7 @@ def create(request):
             title = form.cleaned_data["title"]
             text = form.cleaned_data["text"]
             if(util.get_entry(title)):
-                message = "Sorry, this title already exists... Try something else."
+                message = "Sorry, this title already exists"
                 return render(request,"encyclopedia/create.html",{
                     "form":form,
                     "message":message
