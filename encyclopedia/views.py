@@ -119,10 +119,6 @@ def save(request):
           
             })
 
-
-
-
-
      
 def rndPage(request):
 
