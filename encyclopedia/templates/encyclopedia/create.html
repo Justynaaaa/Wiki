@@ -13,7 +13,6 @@
     <form action="{% url 'create'%}" method="POST">
         
        
-        
 
         {% csrf_token %}
         <h5>{{form.title.label}}</h5>
@@ -26,17 +25,7 @@
        
         <br><br>
         <input type="submit" value="Save">
-    <!-- <br>
-    <div >
-   <label for="create">content:</label>
-   <br>
-   <textarea style= height:40vh;width:90vh; > {{ entry }}</textarea> 
-  
  
-  </div>
-  <input type="submit" value="Submit">
-
--->
 
 {{entry|safe}}
 </form>
